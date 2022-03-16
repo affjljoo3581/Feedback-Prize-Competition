@@ -1,0 +1,11 @@
+numpy
+omegaconf
+pandas
+pytorch_lightning
+scikit_learn
+sentencepiece
+torch==1.10.2+cu113
+transformers
+iterative-stratification
+text_unidecode
+wandb

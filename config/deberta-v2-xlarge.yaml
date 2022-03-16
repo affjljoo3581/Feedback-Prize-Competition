@@ -1,0 +1,57 @@
+dataset:
+  dataset_filename: ./feedback-prize-2021/train.csv
+  textfile_dir: ./feedback-prize-2021/train
+  max_length: 2048
+  normalize: true
+  num_folds: 5
+  fold_index: 0
+  dataloader_workers: -1
+  random_seed: 42
+
+model:
+  transformer:
+    pretrained_model_name_or_path: microsoft/deberta-v2-xlarge
+  decoding:
+    beam_size: 4
+    minimum_lengths:
+      Lead: 9
+      Claim: 3
+      Position: 5
+      Rebuttal: 4
+      Evidence: 14
+      Counterclaim: 6
+      Concluding Statement: 11
+    minimum_probs:
+      Lead: 0.70
+      Claim: 0.55
+      Position: 0.55
+      Rebuttal: 0.55
+      Evidence: 0.65
+      Counterclaim: 0.50
+      Concluding Statement: 0.70
+  num_reinit_layers: 0
+  random_seed: 42
+
+optim:
+  optimizer:
+    lr: 7e-6
+    betas: [0.9, 0.999]
+    eps: 1e-6
+    weight_decay: 0.01
+  scheduler:
+    name: linear
+    num_warmup_steps: 700
+    num_training_steps: 7000
+
+train:
+  name: deberta-v2-xlarge
+  batch_size: 8
+  accumulate_grads: 1
+  max_grad_norm: 1.0
+  gradient_checkpointing: true
+  validation_interval: 0.05
+  logging_interval: 10
+  evaluate_after_steps: 4000
+  save_best_checkpoint: true
+  precision: 16
+  gpus: 1

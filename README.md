@@ -1,4 +1,6 @@
 # Feedback Prize - Evaluating Student Writing
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Faffjljoo3581%2FFeedback-Prize-Competition.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Faffjljoo3581%2FFeedback-Prize-Competition?ref=badge_shield)
+
 
 ## Introduction
 
@@ -161,3 +163,5 @@ In our experiments, `--group_strategy=mean` with `--min_threshold=[half of submi
 
 ## License
 This repository is released under the Apache License 2.0. License can be found in [LICENSE file](./LICENSE).
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Faffjljoo3581%2FFeedback-Prize-Competition.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Faffjljoo3581%2FFeedback-Prize-Competition?ref=badge_large)

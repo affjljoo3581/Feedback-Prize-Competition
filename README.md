@@ -158,6 +158,3 @@ $ python src/ensemble.py \
     --min_threshold=5
 ```
 In our experiments, `--group_strategy=mean` with `--min_threshold=[half of submissions]` performed best.
-
-## License
-This repository is released under the Apache License 2.0. License can be found in [LICENSE file](./LICENSE).
